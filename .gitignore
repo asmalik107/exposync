@@ -39,3 +39,14 @@ yarn-error.*
 !.yarn/releases
 !.yarn/plugins
 .pnp.*
+
+# vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# idea
+.idea/*
