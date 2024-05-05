@@ -7,7 +7,7 @@
   },
   "experiments": {
     "tsconfigPaths": true,
-    "typedRoutes": true
+    "typedRoutes": true,
   },
   "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
 }
