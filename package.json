@@ -6,8 +6,6 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "run:ios": "expo run:ios",
-    "run:android": "expo run:ios",
     "clean": "expo prebuild --clean",
     "prebuild": "expo prebuild",
     "lint": "eslint .",
