@@ -5104,7 +5104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:^4.3.0":
+"deepmerge@npm:^4.3.0, deepmerge@npm:^4.3.1":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
   checksum: 10c0/e53481aaf1aa2c4082b5342be6b6d8ad9dfe387bc92ce197a66dea08bd4265904a087e75e464f14d1347cf2ac8afe1e4c16b266e0561cc5df29382d3c5f80044
@@ -6145,6 +6145,8 @@ __metadata:
     react-native-mmkv: "npm:^2.12.2"
     react-native-safe-area-context: "npm:^4.10.1"
     react-native-screens: "npm:^3.31.1"
+    reactotron-plugin-zustand: "npm:^2.0.3"
+    reactotron-react-native: "npm:^5.1.7"
     typescript: "npm:^5.1.3"
     zustand: "npm:^4.5.2"
   languageName: unknown
@@ -8839,6 +8841,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mitt@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "mitt@npm:3.0.1"
+  checksum: 10c0/3ab4fdecf3be8c5255536faa07064d05caa3dd332bd318ff02e04621f7b3069ca1de9106cfe8e7ced675abfc2bec2ce4c4ef321c4a1bb1fb29df8ae090741913
+  languageName: node
+  linkType: hard
+
 "mkdirp@npm:^0.5.1, mkdirp@npm:~0.5.1":
   version: 0.5.6
   resolution: "mkdirp@npm:0.5.6"
@@ -9949,6 +9958,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-flipper@npm:^0.164.0":
+  version: 0.164.0
+  resolution: "react-native-flipper@npm:0.164.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-native: ">0.62.0"
+  checksum: 10c0/3b370297e90670a4fc133d733c01ab0ca261af6c547521e35b3556460788a01ef4c4f4f385542fc2519ee0134a83b5e17c87d00b34175c456c6c6bf80ab8f898
+  languageName: node
+  linkType: hard
+
 "react-native-mmkv@npm:^2.12.2":
   version: 2.12.2
   resolution: "react-native-mmkv@npm:2.12.2"
@@ -10064,6 +10083,47 @@ __metadata:
   dependencies:
     loose-envify: "npm:^1.1.0"
   checksum: 10c0/b562d9b569b0cb315e44b48099f7712283d93df36b19a39a67c254c6686479d3980b7f013dc931f4a5a3ae7645eae6386b4aa5eea933baa54ecd0f9acb0902b8
+  languageName: node
+  linkType: hard
+
+"reactotron-core-client@npm:2.9.3":
+  version: 2.9.3
+  resolution: "reactotron-core-client@npm:2.9.3"
+  dependencies:
+    reactotron-core-contract: "npm:0.2.3"
+  checksum: 10c0/da48d7ee488aea67b290fb6a687e90d2d90e64a03c7a4cd4483d6bed7fc3336e4f7b7f1ebe78ecf11a477d97aa575f0f71948154f692a879532baa52f0777684
+  languageName: node
+  linkType: hard
+
+"reactotron-core-contract@npm:0.2.3":
+  version: 0.2.3
+  resolution: "reactotron-core-contract@npm:0.2.3"
+  checksum: 10c0/635b21cfbbd23f8c3548890da3078a27568433aae34b07e8f6970d1cb5f167377cccd25df93e5e4c9669547c66b14701ed450031718cf5964aa68a6553452973
+  languageName: node
+  linkType: hard
+
+"reactotron-plugin-zustand@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "reactotron-plugin-zustand@npm:2.0.3"
+  dependencies:
+    deepmerge: "npm:^4.3.1"
+  checksum: 10c0/5fbd513fe1266a54325b98a90e2415fe74f54751bcca60843aaf68ba4869625ebfb3ff3d8555e70fdc8ff9ffa38610ded2d1a63ca0ca7b7ad69b31af175b9282
+  languageName: node
+  linkType: hard
+
+"reactotron-react-native@npm:^5.1.7":
+  version: 5.1.7
+  resolution: "reactotron-react-native@npm:5.1.7"
+  dependencies:
+    mitt: "npm:^3.0.1"
+    react-native-flipper: "npm:^0.164.0"
+    reactotron-core-client: "npm:2.9.3"
+  peerDependencies:
+    react-native: ">=0.40.0"
+  dependenciesMeta:
+    react-native-flipper:
+      optional: true
+  checksum: 10c0/c3b780ba094cbb04ea5f0573b09a9c58a3f00f80df2155e7e5374064dc83f1c1ee994f667562c3f8e17828f72fc9c8e6d5b92d109a29d6f9c95d5aaa9f124d3c
   languageName: node
   linkType: hard
 

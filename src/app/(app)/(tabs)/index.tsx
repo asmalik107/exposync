@@ -8,7 +8,7 @@ interface TestStore {
   removeAll: () => void;
 }
 
-const useTestStore = create<TestStore>((set) => ({
+export const useTestStore = create<TestStore>((set) => ({
   count: 0,
   increaseCount: () => set((state) => ({ count: state.count + 1 })),
   removeAll: () => set({ count: 0 }),
