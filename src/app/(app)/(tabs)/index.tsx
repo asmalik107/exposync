@@ -1,4 +1,6 @@
-import { Pressable, Text, View } from 'react-native';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 import { MMKV } from 'react-native-mmkv';
 import { create } from 'zustand';
 
@@ -23,12 +25,20 @@ export default function Index() {
   const count = useTestStore((state) => state.count);
   const increaseCount = useTestStore((state) => state.increaseCount);
 
+  const { isPending, error, data, isFetching, isLoading, isError } = useQuery({
+    queryKey: ['repoData'],
+    queryFn: () =>
+      axios.get('https://api.github.com/repos/tannerlinsley/react-query').then((res) => res.data),
+  });
+
   const username = storage.getString('user.name'); // 'Marc'
   const age = storage.getNumber('user.age'); // 21
   const isMmkvFastAsf = storage.getBoolean('is-mmkv-fast-asf'); // true
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <ScrollView
+      style={{ flex: 1 }}
+      contentContainerStyle={{ justifyContent: 'center', alignItems: 'center' }}>
       <Text>Home</Text>
       <Text>{username}</Text>
       <Text>{age}</Text>
@@ -36,6 +46,9 @@ export default function Index() {
       <Pressable onPress={increaseCount}>
         <Text>Count: {count}</Text>
       </Pressable>
-    </View>
+      <Text>Loading: {isLoading}</Text>
+      <Text>Error: {isError}</Text>
+      <Text>Data: {JSON.stringify(data)}</Text>
+    </ScrollView>
   );
 }
